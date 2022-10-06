@@ -1,0 +1,3 @@
+/Users/arteriorodrigues/git/LifeModel/exc/CMakeFiles/DisplayImage.dir
+/Users/arteriorodrigues/git/LifeModel/exc/CMakeFiles/edit_cache.dir
+/Users/arteriorodrigues/git/LifeModel/exc/CMakeFiles/rebuild_cache.dir
