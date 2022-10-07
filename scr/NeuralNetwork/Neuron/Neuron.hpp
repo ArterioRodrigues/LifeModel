@@ -1,6 +1,8 @@
+
 #ifndef NEURON_HPP
 #define NEURON_HPP
 
+#include "../Edge/Edge.hpp"
 /*
  A Neuron has a parent layer. A neuron accumulates the output of the edges connected to it (_accumulated),
 it outputs that input to its edges after processing it with its _activation_function 
@@ -9,7 +11,13 @@ it outputs that input to its edges after processing it with its _activation_func
 
 class Neuron{
     public:
+      
+        Neuron();
+
         int accumulated_output;
+        
+        Edge* prev_edges;
+        Edge* next_edges;
 
 };
 

@@ -1,7 +1,8 @@
+
 #ifndef EDGE_H
 #define EDGE_H
 
-#include "../Neuron/Neuron.hpp"
+class Neuron;
 
 /*
 An Edge knows its next neuron (_n), the neuron its coming from (_nb), it has a weight (_w), 

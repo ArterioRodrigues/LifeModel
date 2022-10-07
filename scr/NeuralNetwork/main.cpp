@@ -1,11 +1,13 @@
 #include <iostream>
-#include "Layer/Layer.hpp"
+#include "NeuralNetwork/NeuralNetwork.hpp"
 
 
 
 int main(){
 
-   Layer layer(lt::OUTPUT , 2);
+   NeuralNetwork ne(2, 5, 2, 1);
+   
+   ne.displayNetwork();
 
 
 
