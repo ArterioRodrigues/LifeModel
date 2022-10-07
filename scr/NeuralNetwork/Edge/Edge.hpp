@@ -2,6 +2,7 @@
 #define EDGE_H
 
 #include "../Neuron/Neuron.hpp"
+
 /*
 An Edge knows its next neuron (_n), the neuron its coming from (_nb), it has a weight (_w), 
 it can memorize how much its weight was shift (_last_shift) last time it was, 

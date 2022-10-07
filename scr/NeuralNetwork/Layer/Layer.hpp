@@ -18,7 +18,7 @@ namespace lt {
 class Layer {
     public:
         Layer( lt::Type type, int num);
-        Neuron** neuron_layer;
+        Neuron* neuron_layer;
 };
 
 #endif
