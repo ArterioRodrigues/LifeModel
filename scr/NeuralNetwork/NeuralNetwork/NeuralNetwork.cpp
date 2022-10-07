@@ -15,7 +15,7 @@ void NeuralNetwork::setUpConnection(){
     int n = this->input->layer_size;
     int k = this->hidden->layer_size;
     int l = this->output->layer_size;
-    
+
     Neuron* neuron;
 
     for(int i = 0; i < n; i++){
@@ -23,6 +23,8 @@ void NeuralNetwork::setUpConnection(){
         for(int j = 0; j < k; j++)
             neuron->next_edges[j].next_neuron = &(this->hidden->neuron_layer[j]);
     }
+
+
 }
 
 
