@@ -11,7 +11,7 @@ it doesn’t work the same way depending on its type and it has an activation fu
 namespace lt {
     enum Type {
         INPUT,
-        HIDDEN,
+        HIDDEN, 
         OUTPUT,
     };
 }
@@ -20,11 +20,12 @@ class Layer {
     public:
         Layer( lt::Type type, int num);
 
-        void setEdges(int prev, int next);
-       
-
         Neuron* neuron_layer;
+
         int layer_size;
+        int num_edges;
+
+        lt::Type type;
 };
 
 #endif

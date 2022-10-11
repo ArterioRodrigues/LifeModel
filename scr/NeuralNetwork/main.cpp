@@ -5,7 +5,7 @@
 
 int main(){
 
-   NeuralNetwork ne(2, 5, 2, 1);
+   NeuralNetwork ne(2, 3, 2, 1);
    
    ne.displayNetwork();
 

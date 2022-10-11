@@ -13,6 +13,7 @@ and it has a backpropagation memory so that it can retain a part of the chain ru
 class Edge {
 
     public:
+        Edge();
         int weight;
         int weight_before;
 

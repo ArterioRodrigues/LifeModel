@@ -15,7 +15,7 @@ class Neuron{
         Neuron();
 
         int accumulated_output;
-        
+
         Edge* prev_edges;
         Edge* next_edges;
 

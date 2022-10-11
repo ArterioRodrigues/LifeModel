@@ -14,7 +14,8 @@ class NeuralNetwork {
     public:
         NeuralNetwork(int size_input, int size_hidden, int size_output, int num_hidden);
         void displayNetwork();
-         void setUpConnection();
+        void setUpConnection();
+        
         Layer* input;
         Layer* hidden;
         Layer* output;        
