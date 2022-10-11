@@ -15,22 +15,39 @@ void NeuralNetwork::setUpConnection(){
     int output_size = this->output->layer_size;
 
     Neuron* neuron;
-    
-    //Sets up the nodes edges and there connects to the other nodes in 
-    // the network
+    Edge* edge;
+    //Sets up the nodes edges and there connects to the other nodes in the network
+    //Sets up the edges for the nodes
     for(int i = 0; i < input_size; i++){
         neuron = &(input->neuron_layer[i]);
         neuron->next_edges = new Edge[hidden_size];
-    }
 
+        //Set up the edge here 
+        for(int j = 0; j < hidden_size; j++){
+            edge = &(neuron->next_edges[j]);
+            edge->prev_neuron = neuron;
+        }
+    }
+    //Setting up the middle layer
     for(int i = 0; i < hidden_size; i++){
         
         neuron = &(hidden->neuron_layer[i]);
         neuron->next_edges = new Edge[output_size];
+
+         //Set up the edge here 
+        for(int j = 0; j < output_size; j++){
+            edge = &(neuron->next_edges[j]);
+            edge->prev_neuron = neuron;
+        }
+
+
         neuron->prev_edges = new Edge[input_size];
 
         for(int j = 0; j < input_size; j++){
             neuron->prev_edges[j] = ((input->neuron_layer[j]).next_edges[i]);
+            edge = &(input->neuron_layer[j].next_edges[i]);
+
+            edge->next_neuron = neuron;
         }
     }
 
@@ -40,13 +57,12 @@ void NeuralNetwork::setUpConnection(){
 
          for(int j = 0; j < hidden_size; j++){
             neuron->prev_edges[j] = ((hidden->neuron_layer[j]).next_edges[i]);
+            edge = &(neuron->prev_edges[j]);
+
+            edge->next_neuron = neuron;
         }
     }
-
-    //Sets up the edges for the nodes
-    Edge* edge;
 }
-
 
 void NeuralNetwork::displayNetwork(){
 
